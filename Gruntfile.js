@@ -1,5 +1,14 @@
 module.exports = function (grunt) {
   grunt.initConfig({
+    connect: {
+      server: {
+        options: {
+          port: 8080,
+          base: 'src'
+        }
+      }
+    },
+
     less: {
       dev: {
         options: {},
@@ -27,8 +36,9 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['connect', 'watch']);
 };
