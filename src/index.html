@@ -8,9 +8,31 @@
   <link type="text/css" rel="stylesheet" href=".tmp/styles/main.css" />
 </head>
 <body>
-
-  <ng-view></ng-view>
-
+  <header>
+    <div class="container">
+      <div class="page-header">
+        <h1>Skeleton App <small>for Angular, Require, and Bootstrap</small></h1>
+      </div>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+          <div class="nav navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="search">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <ng-view></ng-view>
+  </div>
   <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
 </body>
 </html>
