@@ -8,31 +8,36 @@
   <link type="text/css" rel="stylesheet" href=".tmp/styles/main.css" />
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="page-header">
-        <h1>Skeleton App <small>for Angular, Require, and Bootstrap</small></h1>
-      </div>
+  <div class="container">
+    <header class="page-header">
+      <h1>Skeleton App <small>for Angular, Require, and Bootstrap</small></h1>
+    </header>
+
+    <div ng-controller="MainCtrl">
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
+            <li class="active"><a href="#">All Users</a></li>
+            <li ng-repeat="user in activeUsers">
+              <a class="active-user">
+                {{user.fName}} {{user.lName}}
+                <i ng-click="deactivate(user)" class="glyphicon glyphicon-remove"></i>
+              </a>
+            </li>
           </ul>
           <div class="nav navbar-form navbar-right">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="search">
+              <input type="text" class="form-control" placeholder="search" ng-model="search">
             </div>
           </div>
         </div>
       </nav>
+
+      <ng-view></ng-view>
+
     </div>
-  </header>
-  <div class="container">
-    <ng-view></ng-view>
   </div>
+
   <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
 </body>
 </html>

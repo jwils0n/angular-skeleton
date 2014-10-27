@@ -1,12 +1,17 @@
 define([
   'angular',
   'angularRoute',
+  'angularResource',
   'bootstrap',
-  'ng/controllers'
+  'ng/controllers',
+  'ng/services',
+  'ng/directives'
 ], function (angular) {
   angular.module('app', [
     'ngRoute',
-    'app.controllers'
+    'app.controllers',
+    'app.services',
+    'app.directives'
   ])
     .config(['$routeProvider', function($routeProvider) {
       $routeProvider

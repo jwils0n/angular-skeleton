@@ -4,6 +4,7 @@ require.config({
 
 		angular: '../bower_components/angular/angular',
     angularRoute: '../bower_components/angular-route/angular-route',
+    angularResource: '../bower_components/angular-resource/angular-resource',
 		jquery: '../bower_components/jquery/dist/jquery',
 		lodash: '../bower_components/lodash/dist/lodash',
 		moment: '../bower_components/moment/moment',
@@ -18,6 +19,7 @@ require.config({
 		},
 
     angularRoute: ['angular'],
+    angularResource: ['angular'],
 
 		jquery: {
 			exports: '$'

@@ -3,4 +3,27 @@
 
 a {
   color: @primary;
+  cursor: pointer;
+}
+
+.table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+.active-user {
+  position: relative;
+
+  &:hover {
+    i {
+      display: inline-block;
+    }
+  }
+
+  i {
+    position: absolute;
+    top: 10px;
+    font-size: 12px;
+    right: 0;
+    display: none;
+  }
 }
